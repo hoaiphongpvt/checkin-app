@@ -9,16 +9,17 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.hoaiphong.checkinapp",
       "config": {
-        "googleMapsApiKey": "AIzaSyAW_CxjhYNbYfVYH2Dhdzxe7w5ZftgGnkU"
+        "googleMapsApiKey": "AIzaSyBjl8AWy0CRVXf-9GdkQAEqN4mwu7ZZTWQ"
       }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "googleMapsApiKey": "AIzaSyBjl8AWy0CRVXf-9GdkQAEqN4mwu7ZZTWQ"
       }
     },
     "web": {

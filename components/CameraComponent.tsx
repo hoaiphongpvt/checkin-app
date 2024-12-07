@@ -48,7 +48,7 @@ export default function CameraComponent() {
   }
 
   const handleSavePicture = () => {
-    Alert.alert('Saved', 'Saved Picture Successfully')
+    Alert.alert('Success', 'Checkin Success')
     setImageUri('')
   }
 

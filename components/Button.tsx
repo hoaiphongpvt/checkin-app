@@ -14,7 +14,6 @@ type ButtonProps = {
   title?: string
   customStyles?: ViewStyle
   size?: number
-  bgColor?: string
   iconColor?: string
 }
 

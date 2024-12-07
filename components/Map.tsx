@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { StyleSheet, View } from 'react-native'
-import MapView, { PROVIDER_GOOGLE, Region } from 'react-native-maps'
+import MapView, {
+  PROVIDER_GOOGLE,
+  PROVIDER_DEFAULT,
+  Region,
+} from 'react-native-maps'
 
 type Location = {
   latitude: number
@@ -15,18 +19,18 @@ const Map = (props: MapProps) => {
   const { location } = props
   const mapRef = useRef<MapView>(null)
   const [region, setRegion] = useState<Region>({
-    latitude: location.latitude,
-    longitude: location.longitude,
-    latitudeDelta: 2,
-    longitudeDelta: 2,
+    latitude: location.latitude || 1,
+    longitude: location.longitude || 1,
+    latitudeDelta: 1,
+    longitudeDelta: 1,
   })
 
   useEffect(() => {
     setRegion({
       latitude: location.latitude,
       longitude: location.longitude,
-      latitudeDelta: 0.01,
-      longitudeDelta: 0.01,
+      latitudeDelta: 0.002,
+      longitudeDelta: 0.002,
     })
   }, [location])
 
@@ -39,10 +43,10 @@ const Map = (props: MapProps) => {
   return (
     <MapView
       style={styles.map}
-      provider={PROVIDER_GOOGLE}
+      provider={PROVIDER_DEFAULT}
       ref={mapRef}
       region={region}
-      showsUserLocation
+      showsUserLocation={true}
     />
   )
 }

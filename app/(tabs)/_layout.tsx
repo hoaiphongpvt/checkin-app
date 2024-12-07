@@ -31,22 +31,9 @@ export default function RootLayout() {
         }}
       />
       <Tabs.Screen
-        name='camera'
+        name='user'
         options={{
-          title: 'Camera',
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons
-              name={focused ? 'camera' : 'camera-outline'}
-              color={color}
-              size={24}
-            />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name='login'
-        options={{
-          title: 'Login',
+          title: 'User',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
               name={focused ? 'person' : 'person-outline'}
